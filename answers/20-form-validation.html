@@ -52,6 +52,7 @@
           setErrorMessage("");
           if (includesHangul(userValue)) {
             setErrorMessage("한글은 입력할 수 없습니다.");
+            return;
           }
           setValue(userValue.toUpperCase());
         }
@@ -75,7 +76,7 @@
               onChange={handleInputChange}
             />
             <button type="submit">생성</button>
-            <p style={{ color: "red" }}>{errorMessage}</p>
+            <p style={{ color: "red", fontWeight: "bold" }}>{errorMessage}</p>
           </form>
         );
       };

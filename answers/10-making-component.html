@@ -56,7 +56,19 @@
         </form>
       );
 
+      /*const Form = () => (
+        <form>
+          <input
+            type="text"
+            name="name"
+            placeholder="영어 대사를 입력해주세요"
+          />
+          <button type="submit">생성</button>
+        </form>
+      );*/
+
       function CatItem(props) {
+        // console.log(props);
         return (
           <li>
             <img src={props.img} />
@@ -66,7 +78,7 @@
 
       function Favorites() {
         return (
-          <ul class="favorites">
+          <ul className="favorites">
             <CatItem img="https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn" />
             <CatItem img="https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript" />
           </ul>
@@ -75,7 +87,7 @@
 
       const MainCard = () => {
         return (
-          <div class="main-card">
+          <div className="main-card">
             <img
               src="https://cataas.com/cat/60b73094e04e18001194a309/says/react"
               alt="고양이"
